@@ -7,6 +7,9 @@ Tweeter.TweetFormController = Ember.Controller.extend({
         dateTime: new Date
       };
 
+      this.set('inputUser', null);
+      this.set('inputText', null);
+
       tweets.addObject(tweet);
 
     }

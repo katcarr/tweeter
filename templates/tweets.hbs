@@ -1,12 +1,16 @@
-<ul>
-  {{#each}}
-    <li>
-      <h4>{{user}}</h4>
-      <p>{{text}}</p>
-    </li>
-  {{/each}}
-</ul>
+<div class="row">
+  <div class="col-xs-4">
+    {{render 'tweet-form'}}
+  </div>
 
-
-{{#link-to 'tweet-form'}}Add Tweet{{/link-to}}
-{{outlet}}
+  <div class="col-xs-6">
+    <ul>
+      {{#each}}
+        <li>
+          <h4>{{user}}</h4>
+          <p>{{text}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
