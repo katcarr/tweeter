@@ -1,14 +1,16 @@
 <form>
   <div class= "form-group">
     <label>User Name</label>
-    {{input class="form-control" value=inputUser}}
+    {{input class="form-control" required="true" value=inputUser}}
   </div>
 
   <div class= "form-group">
     <label>Tweet</label>
-    {{input class="form-control" value=inputText}}
+    {{textarea class="form-control" maxlength="141" value=inputText key-up = "tweetLength"}}
   </div>
 
   <button class="btn btn-info" {{action 'newTweet'}}>Tweet It</button>
 
 </form>
+
+<p>{{remainingChars}}</p>
