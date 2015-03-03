@@ -1,0 +1,14 @@
+<form>
+  <div class= "form-group">
+    <label>User Name</label>
+    {{input class="form-control" value=user}}
+  </div>
+
+  <div class= "form-group">
+    <label>Tweet</label>
+    {{input class="form-control" value=text}}
+  </div>
+
+  <button class="btn btn-info" {{action 'newTweet'}}>Tweet It</button>
+
+</form>
