@@ -6,13 +6,17 @@
   <div class="col-xs-6">
     <ul class="list-unstyled">
       {{#each}}
-        <div {{action "showTime" on="click"}}>
+        <div {{action "showTime" on="doubleClick"}}>
           <li class="tweet">
             <h4>{{user}}</h4>
-            <p>{{text}}</p>
+            <p>{{text}} | <a href="#" {{action 'showReply'}}>Reply</a></p>
 
             {{#if dateShowing}}
               <p>{{dateTime}}</p>
+            {{/if}}
+
+            {{#if replyShowing}}
+              {{partial 'tweet-form'}}
             {{/if}}
 
           </li>

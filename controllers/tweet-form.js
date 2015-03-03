@@ -11,6 +11,7 @@ Tweeter.TweetFormController = Ember.Controller.extend({
 
       this.set('inputUser', null);
       this.set('inputText', null);
+      this.set('remainingChars', 141);
 
       tweets.addObject(tweet);
 
