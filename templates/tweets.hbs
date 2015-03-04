@@ -16,9 +16,10 @@
             {{/if}}
 
             {{#if replyShowing}}
-              {{partial 'tweet-form'}}
+              <div class="well">
+                {{render 'tweet-form' tweets}}
+              </div>
             {{/if}}
-
           </li>
       </div>
       {{/each}}
