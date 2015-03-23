@@ -7,7 +7,7 @@ Tweeter.TweetController = Ember.ObjectController.extend({
     },
 
     showReply: function() {
-      this.set('replyShowing', true);
+      this.set('replyShowing', !this.get('replyShowing'));
     }
   }
 
