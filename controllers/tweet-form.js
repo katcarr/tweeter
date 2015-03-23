@@ -2,6 +2,7 @@ Tweeter.TweetFormController = Ember.Controller.extend({
   remainingChars: 141,
   actions: {
     newTweet: function() {
+
       var tweet = {
         user: this.get('inputUser'),
         text: this.get('inputText'),
@@ -12,6 +13,7 @@ Tweeter.TweetFormController = Ember.Controller.extend({
       this.set('inputUser', null);
       this.set('inputText', null);
       this.set('remainingChars', 141);
+
 
       tweets.addObject(tweet);
 
